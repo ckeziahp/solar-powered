@@ -1,10 +1,11 @@
 import React from "react";
 
-import Contact from "./sections/Contact";
+
 import Services from "./home/services";
 import Company from "./home/company";
 import About from "./home/about";
 import Hero from "./home/hero";
+import Contact from "./home/contact";
 
 const Home = () => {
   return (
@@ -13,7 +14,7 @@ const Home = () => {
       <Company />
       <About />
       <Services />
-      <Contact />
+      <Contact/>
     </div>
   );
 };

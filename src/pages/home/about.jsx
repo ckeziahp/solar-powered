@@ -1,5 +1,5 @@
 import React from 'react'
-import mike from "../assets/images/mike.jpg"
+import mike from "../../assets/images/mike.jpg"
 
 const About = () => {
     return (
@@ -23,7 +23,7 @@ const About = () => {
           </div>
 
           <div className="w-full h-[500px] md:w-1/2 flex justify-center">
-              <img src={mike} alt="Michael" />
+              <img src={mike}  alt="Michael" />
           </div>
 
           </div>
