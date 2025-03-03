@@ -25,34 +25,20 @@ const Footer = () => {
       <ul>
 
         <li className="mb-2">
-          <a href="about" className="hover:text-gray-300">
+          <a href="/about" className="hover:text-gray-300">
             About Us
           </a>
         </li>
         
-        <li>
-          <a href="#" className="hover:text-gray-300">
-            Blog
-          </a>
-        </li>
 
       </ul>
     </div>
     <div>
       <h3 className="text-xl font-semibold mb-3">Support</h3>
       <ul>
-        {/* <li className="mb-2">
-          <a href="#" className="hover:text-gray-300">
-            FAQ
-          </a>
-        </li> */}
-        {/* <li className="mb-2">
-          <a href="#" className="hover:text-gray-300">
-            Help Center
-          </a>
-        </li> */}
+        
         <li className="mb-2">
-          <a href="contact" className="hover:text-gray-300">
+          <a href="/contact" className="hover:text-gray-300">
             Contact Us
           </a>
         </li>

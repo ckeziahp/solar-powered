@@ -5,21 +5,23 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="bg-white shadow">
-      <div className="container mx-auto px-6 py-4 flex justify-between items-center">
+    <div className="bg-white ">
+      <div className="py-4 flex flex-col w-full justify-between p-4 bg-blue-200min-w-full gap-x-5 items-center mx-auto px-4 bg-blue-100">
         <Link to="/">
+
           {/* Insert your logo image here */}
-          <img src="/logo.png" alt=" Logo" className="h-8" />
+          <img src="/logo.png" alt=" Logo" className="h-2" />
         </Link>
-        <div className="space-x-4">
-          <Link className="text-gray-600 hover:text-gray-800" to="/">Home</Link>
-          <Link className="text-gray-600 hover:text-gray-800" to="/about">About</Link>
-          <Link className="text-gray-600 hover:text-gray-800" to="/services">Services</Link>
-          <Link className="text-gray-600 hover:text-gray-800" to="/contact">Company</Link>
-          <Link className="text-gray-600 hover:text-gray-800" to="/contact">Contact</Link>
+        <div className="space-x-4 ">
+          <Link to="/" className="text-blue-600 underline hover:text-gray-800 gap-x-5" >Home</Link>
+          <Link to="/about" className="text-gray-600 hover:text-green-800" >About</Link>
+          <Link to="/features" className="text-gray-600 hover:underline" >Features</Link>
+          <Link to="/services" className="text-gray-600 hover:to-blue-500-underline" >Services</Link>
+          <Link to="/company" className="text-gray-600 hover:text-gray-800" >Company</Link>
+          <Link to="/contact" className="text-gray-600 hover:text-gray-800" >Contact</Link>
         </div>
       </div>
-    </nav>
+    </div>
   
 
 
