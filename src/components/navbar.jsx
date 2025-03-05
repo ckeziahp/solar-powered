@@ -1,21 +1,21 @@
-import React from  "react"
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { motion, useAnimation } from "framer-motion";
+import log from "../assets/images/log.png"; // Import your logo
 
 const Navbar = () => {
   const [scrolling, setScrolling] = useState(false);
-  const controls = useAnimation();
   const [menuOpen, setMenuOpen] = useState(false);
+  const controls = useAnimation();
 
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 50) {
         setScrolling(true);
-        controls.start({ opacity: 0.8 });
+        controls.start({ opacity: 0.9, y: -5 });
       } else {
         setScrolling(false);
-        controls.start({ opacity: 1 });
+        controls.start({ opacity: 1, y: 0 });
       }
     };
     window.addEventListener("scroll", handleScroll);
@@ -24,59 +24,79 @@ const Navbar = () => {
 
   return (
     <motion.nav
-      className={`fixed top-0 left-0 w-full px-5 py-4 flex justify-evenly items-center bg-black transition-all duration-300 ${
-        scrolling ? "backdrop-blur-md" : "bg-opacity-100"
+      className={`fixed top-0 left-0 w-full px-5 py-4 min-h-[50px] flex justify-between items-center transition-all duration-300 z-50 ${
+        scrolling ? "backdrop-blur-lg bg-black/80 shadow-lg" : "bg-black"
       }`}
       animate={controls}
     >
-      <Link to="/" className="text-white text-2xl font-bold">
-        SolarCharge
+      {/* Logo - Clickable to Home */}
+      <Link to="/" className="flex items-center">
+        <img src={log} alt="SolarCharge Logo" className="w-[50px] h-[70px] md:w-20 md:h-20" />
+        
       </Link>
 
-      <div className="md:hidden text-white">
-        <button onClick={() => setMenuOpen(!menuOpen)} className="text-white">
-          ☰
-        </button>
-      </div>
+      {/* Mobile Menu Button */}
+      <button
+        className="md:hidden text-white text-2xl"
+        onClick={() => setMenuOpen(true)}
+      >
+        ☰
+      </button>
 
-      <div>
-        <ul
-        className={`md:flex text-white justify- px-5 md:relative flex md:flex-row top-16 w-full md:w-auto md:top-0 bg-black md:bg-transparent transition-transform ${
+      {/* Desktop Navigation */}
+      <ul className="hidden md:flex text-white space-x-10 gap-5">
+  {["Home", "About", "Innovator", "Products", "Feature", "Contact"].map(
+    (item, index) => (
+      <li key={index} className="relative group">
+        <Link
+          to={`/${item.toLowerCase()}`}
+          className="hover:text-red-500 transition duration-300"
+        >
+          {item}
+          {/* Underline effect */}
+          <span className="absolute left-0 bottom-0 w-full h-0.5 bg-red-500 scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+        </Link>
+      </li>
+    )
+  )}
+</ul>
+
+      {/* Sliding Mobile Menu */}
+      <motion.div
+        className={`fixed top-0 right-0 h-screen w-64 bg-black shadow-lg flex flex-col items-center justify-center z-50 ${
           menuOpen ? "block" : "hidden"
         }`}
+        initial={{ x: "100%" }}
+        animate={{ x: menuOpen ? "0%" : "100%" }}
+        transition={{ type: "spring", stiffness: 100, damping: 20 }}
       >
-        <li><Link to="/" onClick={() => setMenuOpen(false)}>Home</Link></li>
-        <li><Link to="/about" onClick={() => setMenuOpen(false)}>About</Link></li>
-        <li><Link to="/aboutinnovator" onClick={() => setMenuOpen(false)}>Innovator</Link></li>
-        <li><Link to="/product" onClick={() => setMenuOpen(false)}>Products</Link></li>
-        <li><Link to="/feature" onClick={() => setMenuOpen(false)}>Feature</Link></li>
-        <li><Link to="/contact" onClick={() => setMenuOpen(false)}>Contact</Link></li>
-      </ul></div>
-      
+        {/* Close Button */}
+        <button
+          className="absolute top-6 right-6 text-white text-3xl"
+          onClick={() => setMenuOpen(false)}
+        >
+          ✖
+        </button>
+
+        {/* Mobile Menu Links */}
+        <ul className="text-white text-2xl space-y-6">
+          {["Home", "About", "Innovator", "Products", "Contact"].map(
+            (item, index) => (
+              <li key={index}>
+                <Link
+                  to={`/${item.toLowerCase()}`}
+                  className="hover:text-red-500"
+                  onClick={() => setMenuOpen(false)}
+                >
+                  {item}
+                </Link>
+              </li>
+            )
+          )}
+        </ul>
+      </motion.div>
     </motion.nav>
- 
-
-
-
-
-
-
-
-
-    // <div className="min-h-screen flex flex-col items-center text-blue-900  mx-auto px-4 bg-blue-200">
-    //         <div className ="w-full flex justify-between items-center p-4 bg-blue-200">
-    //         <a href="#" className="text-2xl font-bold">
-    //           <img src={logo} alt="Michael" />
-    //         </a>
-    //             <div className="space-x-4">
-    //                 <Link to="/about" className="hover:underline">About</Link>
-    //                 <Link to="/company" className="hover:underline">Company</Link>
-    //                 <Link to="/services" className="hover:underline">Services</Link>
-    //                 <Link to="/contact" className=" hover:underline">Contact</Link>
-    //             </div>
-    //         </div>
-    //         </div>
   );
 };
 
-export default Navbar
+export default Navbar;
