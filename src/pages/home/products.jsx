@@ -1,46 +1,36 @@
-import React from "react"
-// import AnimatedSection from "../components/AnimatedSection";
-import { motion } from "framer-motion";
-import solar1 from "../../assets/images/solar1.jpg"
-import solar4 from "../../assets/images/solar4.jpg"
-import solar2 from "../../assets/images/solar2.jpg"
-import solar5 from "../../assets/images/solar5.jpg"
+import React from "react";
 
-const productVariants = {
-  hidden: { opacity: 0, y: 30 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
-};
+const products = [
+  { id: 1, src: "https://res.cloudinary.com/dxnamnbff/image/upload/v1741087988/pexels-goumbik-518530_ovnafw.jpg", alt: "Product 1" },
+  { id: 2, src: "https://res.cloudinary.com/dxnamnbff/image/upload/v1741087975/jonathan-castaneda-m5kmVivgqSs-unsplash_bxhj9k.jpg", alt: "Product 2" },
+  { id: 3, src: "https://res.cloudinary.com/dxnamnbff/image/upload/v1741087983/pexels-ulad-r-2149879861-30834709_uanzcu.jpg", alt: "Product 3" },
+];
 
 const Products = () => {
   return (
-    // <AnimatedSection className="bg-black text-white">
-      <div className="max-w-6xl mx-auto px-6">
-        {/* Heading */}
-        <h2 className="text-4xl font-bold text-center text-red-500 mb-8">Our Products</h2>
-
-        {/* Product Grid */}
-        <div className="grid md:grid-cols-3 gap-8">
-          {[solar1, solar4, solar2,solar5].map((id) => (
-            <motion.div
-              key={id}
-              className="bg-white text-black p-4 rounded-lg shadow-lg"
-              variants={productVariants}
-              initial="hidden"
-              animate="visible"
-              whileHover={{ scale: 1.05 }}
-            >
+    <section className="py-16 bg-gradient-to-b from-black to-gray-500 min-h-screen flex flex-col place-content-center jsutify-items-center justify-center">
+      <div className="container mx-auto px-6">
+        <h2 className="text-4xl font-bold text-center text-gray-800 mb-10">
+          Our Products
+        </h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 justify-items-center">
+          {products.map((product) => (
+            <div key={product.id} className="rounded-lg shadow-lg overflow-hidden bg-gray-100 w-full max-w-sm">
               <img
-                src={`${solar1, solar4, solar2,solar5}.jpg`}
-                alt={`Solar Charger ${id}`}
-                className="w-full h-48 object-cover rounded-md"
+                src={product.src}
+                alt={product.alt}
+                className="w-full h-72 object-cover object-center"
               />
-              <h3 className="text-xl font-bold mt-4">Solar Charger Model {String.fromCharCode(64 + id)}</h3>
-              <p className="text-sm mt-2">Fast and efficient solar-powered charging solution.</p>
-            </motion.div>
+              <div className="p-4">
+                <h3 className="text-lg font-semibold text-gray-700 text-center">
+                  {product.alt}
+                </h3>
+              </div>
+            </div>
           ))}
         </div>
       </div>
-    // </AnimatedSection>
+    </section>
   );
 };
 

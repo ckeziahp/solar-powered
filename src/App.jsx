@@ -7,6 +7,7 @@ import About from "./pages/home/about"
 import Feature from './pages/home/feature';
 import Contact from './pages/home/contact';
 import Innovator from './pages/home/Innovator';
+import Products from './pages/home/products';
 
 
 
@@ -45,6 +46,10 @@ function App() {
          {
           path:"/contact",
           element:<Contact/>
+         },
+         {
+          path:"/products",
+          element:<Products/>
          },
         ],
       },
