@@ -3,9 +3,9 @@ import { motion } from "framer-motion";
 import { FaUserGear, FaBolt } from "react-icons/fa6"; // Font Awesome icons
 import mike from "../../assets/images/mike.jpg"; // Change to actual image
 
-const AboutInnovator = () => {
+const Innovator = () => {
   return (
-    <div className="min-h-screen bg-[#F5DED2] flex flex-col justify-center items-center py-16 px-6">
+    <div className="min-h-screen bg-white flex flex-col justify-center items-center py-16 px-6">
       {/* Wrapper */}
       <motion.div
         initial={{ opacity: 0, x: -50 }}
@@ -70,4 +70,4 @@ const AboutInnovator = () => {
   );
 };
 
-export default AboutInnovator;
+export default Innovator;

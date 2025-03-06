@@ -1,89 +1,64 @@
 import React from 'react'
+import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <div className="grid grid-cols-2 gap-8 sm:grid-cols-3 lg:grid-cols-4">
-    <div>
-      <h3 className="text-xl font-semibold mb-3">Products</h3>
-      <ul>
-        <li className="mb-2">
-          <a href="services" className="hover:text-gray-300">
-            Services
-          </a>
-        </li>
-        <li className="mb-2">
-          <a href="product" className="hover:text-gray-300">
-            Product
-          </a>
-        </li>
-        
-      </ul>
+    <div className="bg-gradient-to-b from-black to-gray-500 text-white min-h-[300px] py-16 flex flex-col items-center justify-center text-center">
+      <div className="container mx-auto px-6 md:px-20">
+        {/* Footer Content */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 items-center">
+          {/* About Us Section */}
+          <div className='text-white space-y-10'>
+            <h2 className="text-lg font-semibold mb-3 text-white space-y-10">About Us</h2>
+            <p className="text-white space-y-10 text-1lg">
+              At <span className="font-semibold text-red-500">Chasma-Tech</span>, we are dedicated to providing sustainable solar-powered charging solutions. Our goal is to make energy accessible and reliable anywhere.
+            </p>
+          </div>
+
+          {/* Quick Links */}
+          <div>
+            <h2 className="text-lg font-semibold text-white mb-3">Quick Links</h2>
+            <ul className="text-white space-y-10">
+              <li>
+                <a href="/terms" className="hover:text-red-500">Terms</a>
+              </li>
+              <li>
+                <a href="/policy" className="hover:text-red-500">Policy</a>
+              </li>
+              <li>
+                <a href="/about" className="hover:text-red-500">About Us</a>
+              </li>
+              <li>
+                <a href="/contact" className="hover:text-red-500">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Social Media Icons */}
+          <div>
+            <h2 className="text-lg text-white font-semibold mb-3">Follow Us</h2>
+            <div className="flex justify-center space-x-4">
+              <a href="https://www.facebook.com/share/1EHw687JfR/?mibextid=wwXIfr" className="text-white hover:text-red-500">
+                <FaFacebookF size={20} />
+              </a>
+              <a href="https://www.tiktok.com/@th914060?_t=ZM-8u9QNVCeTkD&_r=1" className="text-white hover:text-red-500">
+                <FaInstagram size={20} />
+              </a>
+              <a href="#" className="text-gray-400 hover:text-red-500">
+                <FaLinkedinIn size={20} />
+              </a>
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom Section */}
+        <div className="border-t border-gray-700 mt-10 pt-6 text-sm text-white w-full">
+          Copyright &copy; {new Date().getFullYear()} 
+          <a href="https://solar-powered.netlify.app/" className="text-red-500 hover:underline"> Chasma-Tech</a>. All rights reserved.
+        </div>
+      </div>
     </div>
+  );
+};
 
-    <div>
-      <h3 className="text-xl font-semibold mb-3">Company</h3>
-      <ul>
-
-        <li className="mb-2">
-          <a href="/about" className="hover:text-gray-300">
-            About Us
-          </a>
-        </li>
-        
-
-      </ul>
-    </div>
-    <div>
-      <h3 className="text-xl font-semibold mb-3">Support</h3>
-      <ul>
-        
-        <li className="mb-2">
-          <a href="/contact" className="hover:text-gray-300">
-            Contact Us
-          </a>
-        </li>
-        <li>
-          <a href="privacy-policy" className="hover:text-gray-300">
-            Privacy Policy
-          </a>
-        </li>
-      </ul>
-    </div>
-
-    <div>
-      <h3 className="text-xl font-semibold mb-3">Subscribe</h3>
-      <p className="text-gray-400 mb-3">
-        Get the latest news and updates.
-      </p>
-      <form className="flex flex-col sm:flex-row">
-        <input
-          type="email"
-          placeholder="Your email"
-          className="w-full p-2 rounded-md text-gray-900 focus:outline-none"
-        />
-        <button
-          type="submit"
-          className="mt-2 sm:mt-0 sm:ml-2 p-2 bg-indigo-600 rounded-md hover:bg-indigo-500 transition-colors"
-        >
-          Subscribe
-        </button>
-      </form>
-    </div>
-
-{/* Bottom Section: Copyright */}
-
-<div className="mt-8 border-t border-gray-800 pt-4 text-center">
-  <p className="text-gray-500 text-sm">
-    © {new Date().getFullYear()} Solar-powered. All rights reserved.
-  </p>
-</div>
-
-  </div>
-
-
-
-
-  )
-}
-
-export default Footer
+export default Footer;

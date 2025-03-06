@@ -1,105 +1,57 @@
-import React from 'react'
-import { motion } from "framer-motion";
-import man from "../../assets/images/man.jpg"
+import React from "react";
 
 const Contact = () => {
   return (
-    <div className="h-screen flex flex-col items-center bg-gray-100 p-10">
-      <motion.div 
-        initial={{ opacity: 30, y: 50 }} 
-        animate={{ opacity: 1, y: 10}} 
-        transition={{ duration: 1 }}
-        className="bg-white p-6 rounded-lg w-full"
-      >
-        <div className="min-h-screen bg-gray-300 py-6 flex flex-col justify-center sm:py-12" style={{
-        backgroundImage: `url(${man})`,
-        height: "98vh",
-        position: "relative",
+    <div
+      className="min-h-screen flex flex-col items-center justify-center px-6 md:px-20 py-10 text-white relative"
+      style={{
+        backgroundImage:
+          "url('https://res.cloudinary.com/dxnamnbff/image/upload/v1741246330/charge.jpg_aqp5vy.jpg')",
         backgroundSize: "cover",
-      }}>
-      <div className="relative py-3 sm:max-w-xl sm:mx-auto">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-blue-700 shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 sm:rounded-3xl"></div>
-        <div className="text-white relative px-4 py-10 bg-blue-200 shadow-lg sm:rounded-3xl sm:p-20">
-          <div className="text-center pb-6">
-            <h1 className="text-3xl">Contact Us!</h1>
-            <p className="text-gray-700">
-              Fill up the form below to send us a message.
-            </p>
+        backgroundPosition: "center",
+      }}
+    >
+      {/* Blur Overlay for Background */}
+      <div className="absolute inset-0 bg-black/30 backdrop-blur-lg"></div>
+
+      {/* Contact Card with Glass Effect */}
+      <div className="relative z-10 bg-white/10 backdrop-blur-lg border border-white/20 p-8 rounded-lg shadow-lg max-w-2xl w-full">
+        <h2 className="text-3xl font-bold text-red-500 text-center mb-6">
+          Get in Touch
+        </h2>
+
+        {/* Gmail */}
+        <div className="mb-4">
+          <h3 className="text-lg font-semibold">Email</h3>
+          <a
+            href="kwekuamfo7@gmail.com
+"
+            className="text-gray-300 hover:text-red-500"
+          >
+            kwekuamfo7@gmail.com
+
+          </a>
+        </div>
+
+        {/* Phone */}
+        <div className="mb-4">
+          <h3 className="text-lg font-semibold">Phone</h3>
+          <p className="text-gray-300"> +233-533141229/ +233-538547420</p>
+        </div>
+
+        {/* Location */}
+        <div>
+          <h3 className="text-lg font-semibold mb-2">Our Location</h3>
+          <div className="w-full h-60">
+            <iframe
+              className="w-full h-full rounded-lg"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8354345094373!2d144.95565111531754!3d-37.81732797975151!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d5df1d7d1b3%3A0x5045675218cee17a!2sMelbourne%20VIC%2C%20Australia!5e0!3m2!1sen!2sgh!4v1611784445134!5m2!1sen!2sgh"
+              allowFullScreen=""
+              loading="lazy"
+            ></iframe>
           </div>
-          <form >
-            <input
-              className="shadow mb-4 appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-              type="text"
-              placeholder="Name"
-              name="name"
-            />
-            <input
-              className="shadow mb-4 appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-              type="email"
-              placeholder="Email"
-              name="email"
-            />
-            <input
-              className="shadow mb-4 appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-              type="text"
-              placeholder="Subject"
-              name="_subject"
-            />
-            <textarea
-              className="shadow mb-4 min-h-0 appearance-none border rounded h-64 w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-              placeholder="Type your message here..."
-              name="message"
-              style={{ height: '121px' }}
-            ></textarea>
-            <div className="flex justify-between">
-              <input
-                className="shadow bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-                type="submit"
-                value="Send ➤"
-              />
-              <input
-                className="shadow bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-                type="reset"
-              />
-            </div>
-          </form>
         </div>
       </div>
-    </div>
-        {/* <div><h1 className="text-3xl font-bold text-center text-green-600">Contact Us</h1>
-        <p className="text-gray-600 text-center mt-2">We'd love to hear from you! Fill out the form below.</p>
-        </div>
-        
-        <form className="mt-6 space-y-4">
-          <input 
-            type="text" 
-            placeholder="Your Name" 
-            className="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-green-500"
-          />
-          <input 
-            type="email" 
-            placeholder="Your Email" 
-            className="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-green-500"
-          />
-          <textarea 
-            placeholder="Your Message" 
-            rows="5" 
-            className="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-green-500"
-          />
-          <button 
-            type="submit" 
-            className="w-full bg-green-500 text-white py-2 rounded-md hover:bg-green-600 transition"
-          >
-            Send Message
-          </button>
-        </form>
-
-        <div className="mt-6 text-center">
-          <p className="text-gray-600">📍 Accra, Ghana</p>
-          <p className="text-gray-600">📧 support@solarcharge.com</p>
-          <p className="text-gray-600">📞 +233 123 456 789</p>
-        </div> */}
-      </motion.div>
     </div>
   );
 };
