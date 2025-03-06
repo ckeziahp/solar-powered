@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { motion, useAnimation } from "framer-motion";
-import log from "../assets/images/log.png"; // Import your logo
+// Removed logo import
 
 const Navbar = () => {
   const [scrolling, setScrolling] = useState(false);
@@ -29,10 +29,9 @@ const Navbar = () => {
       }`}
       animate={controls}
     >
-      {/* Logo - Clickable to Home */}
+      {/* Logo replaced with text */}
       <Link to="/" className="flex items-center">
-        <img src={log} alt="SolarCharge Logo" className="w-[50px] h-[70px] md:w-20 md:h-20" />
-        
+        <span className="text-2xl font-bold text-red-600">Chasma-Tech</span>
       </Link>
 
       {/* Mobile Menu Button */}
@@ -45,21 +44,21 @@ const Navbar = () => {
 
       {/* Desktop Navigation */}
       <ul className="hidden md:flex text-white space-x-10 gap-5">
-  {["Home", "About", "Innovator", "Products", "Feature", "Contact"].map(
-    (item, index) => (
-      <li key={index} className="relative group">
-        <Link
-          to={`/${item.toLowerCase()}`}
-          className="hover:text-red-500 transition duration-300"
-        >
-          {item}
-          {/* Underline effect */}
-          <span className="absolute left-0 bottom-0 w-full h-0.5 bg-red-500 scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
-        </Link>
-      </li>
-    )
-  )}
-</ul>
+        {["Home", "About", "Innovator", "Products", "Feature", "Contact"].map(
+          (item, index) => (
+            <li key={index} className="relative group">
+              <Link
+                to={`/${item.toLowerCase()}`}
+                className="hover:text-red-500 transition duration-300"
+              >
+                {item}
+                {/* Underline effect */}
+                <span className="absolute left-0 bottom-0 w-full h-0.5 bg-red-500 scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+              </Link>
+            </li>
+          )
+        )}
+      </ul>
 
       {/* Sliding Mobile Menu */}
       <motion.div

@@ -36,20 +36,13 @@ const Hero = () => {
       >
         <h1 className="text-5xl md:text-6xl font-bold text-white leading-tight transition-all duration-500 group-hover:text-red-400">
           Power Your Future with{" "}
-          <span className="text-red-500">Solar-Powered</span>
+          <span className="text-red-500">Chasma-Tech</span>
         </h1>
         <p className="mt-4 text-lg text-gray-200 transition-opacity duration-500 group-hover:opacity-80">
           Experience sustainable, innovative phone charging solutions anytime, anywhere.
         </p>
 
-        {/* Animated Button */}
-        <motion.button
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
-          className="mt-6 px-6 py-3 bg-red-500 hover:bg-red-600 text-white rounded-md shadow-md transition-transform duration-300"
-        >
-          Explore Products
-        </motion.button>
+        
       </motion.div>
     </div>
   
