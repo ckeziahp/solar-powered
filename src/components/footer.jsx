@@ -1,5 +1,6 @@
-import React from 'react'
-import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
+import React from 'react';
+import { FaFacebookF, FaLinkedinIn } from "react-icons/fa";
+import { SiTiktok } from "react-icons/si"; // Import TikTok icon
 
 const Footer = () => {
   return (
@@ -8,9 +9,9 @@ const Footer = () => {
         {/* Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 items-center">
           {/* About Us Section */}
-          <div className='text-white space-y-10'>
-            <h2 className="text-lg font-semibold mb-3 text-white space-y-10">About Us</h2>
-            <p className="text-white space-y-10 text-1lg">
+          <div className="text-white space-y-10">
+            <h2 className="text-lg font-semibold mb-3 text-white">About Us</h2>
+            <p className="text-white text-lg leading-relaxed">
               At <span className="font-semibold text-red-500">Chasma-Tech</span>, we are dedicated to providing sustainable solar-powered charging solutions. Our goal is to make energy accessible and reliable anywhere.
             </p>
           </div>
@@ -18,7 +19,7 @@ const Footer = () => {
           {/* Quick Links */}
           <div>
             <h2 className="text-lg font-semibold text-white mb-3">Quick Links</h2>
-            <ul className="text-white space-y-10">
+            <ul className="text-white space-y-4">
               <li>
                 <a href="/terms" className="hover:text-red-500">Terms</a>
               </li>
@@ -36,17 +37,15 @@ const Footer = () => {
 
           {/* Social Media Icons */}
           <div>
-            <h2 className="text-lg text-white font-semibold mb-3">Follow Us</h2>
-            <div className="flex justify-center space-x-4">
+            <h2 className="text-lg font-semibold text-white mb-3">Follow Us</h2>
+            <div className="flex justify-center space-x-4 space-y-5">
               <a href="https://www.facebook.com/share/1EHw687JfR/?mibextid=wwXIfr" className="text-white hover:text-red-500">
                 <FaFacebookF size={20} />
               </a>
               <a href="https://www.tiktok.com/@th914060?_t=ZM-8u9QNVCeTkD&_r=1" className="text-white hover:text-red-500">
-                <FaInstagram size={20} />
+                <SiTiktok size={20} />
               </a>
-              <a href="#" className="text-gray-400 hover:text-red-500">
-                <FaLinkedinIn size={20} />
-              </a>
+            
             </div>
           </div>
         </div>
