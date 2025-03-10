@@ -12,7 +12,7 @@ const Footer = () => {
           <div className="text-white space-y-10">
             <h2 className="text-lg font-semibold mb-3 text-white">About Us</h2>
             <p className="text-white text-lg leading-relaxed">
-              At <span className="font-semibold text-red-500">Chasma-Tech</span>, we are dedicated to providing sustainable solar-powered charging solutions. Our goal is to make energy accessible and reliable anywhere.
+              At <span className="font-semibold text-red-500">Chamas-Tech</span>, we are dedicated to providing sustainable solar-powered charging solutions. Our goal is to make energy accessible and reliable anywhere.
             </p>
           </div>
 
