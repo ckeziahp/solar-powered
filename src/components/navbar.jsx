@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { motion, useAnimation } from "framer-motion";
-// Removed logo import
+// import chamas from "../../assets/chamas.jpg"; // Replace with your actual logo path
 
 const Navbar = () => {
   const [scrolling, setScrolling] = useState(false);
@@ -29,9 +29,10 @@ const Navbar = () => {
       }`}
       animate={controls}
     >
-      {/* Logo replaced with text */}
+      {/* Logo Inserted Here */}
       <Link to="/" className="flex items-center">
-        <span className="text-2xl font-bold text-red-600">Chasma-Tech</span>
+        <img src={"https://res.cloudinary.com/dxnamnbff/image/upload/v1741644230/WhatsApp_Image_2025-03-06_at_15.36.21_43fd7a46_julvll.jpg"} alt="Chasma-Tech Logo" className="w-15 h-auto mr-2" />
+        {/* <span className="text-2xl font-bold text-red-600">Chasm-Tech</span> */}
       </Link>
 
       {/* Mobile Menu Button */}

@@ -36,7 +36,7 @@ const Hero = () => {
       >
         <h1 className="text-5xl md:text-6xl font-bold text-white leading-tight transition-all duration-500 group-hover:text-red-400">
           Power Your Future with{" "}
-          <span className="text-red-500">Chasma-Tech</span>
+          <span className="text-red-500">Chamas-Tech</span>
         </h1>
         <p className="mt-4 text-lg text-gray-200 transition-opacity duration-500 group-hover:opacity-80">
           Experience sustainable, innovative phone charging solutions anytime, anywhere.

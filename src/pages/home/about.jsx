@@ -47,7 +47,7 @@ const About = () => {
     {/* First Paragraph */}
     <div className="mb-6">
       <p className="text-lg text-white leading-relaxed">
-        At <span className="font-semibold text-red-600">Chasma-Tech</span>, we are committed to providing innovative, eco-friendly charging solutions that harness the power of the sun. Our mission is to eradicate the overdependence on electricity to recharge traditional power banks when they run low and to see our product finding the interest of customers.
+        At <span className="font-semibold text-red-600">Chamas-Tech</span>, we are committed to providing innovative, eco-friendly charging solutions that harness the power of the sun. Our mission is to eradicate the overdependence on electricity to recharge traditional power banks when they run low and to see our product finding the interest of customers.
       </p>
     </div>
 

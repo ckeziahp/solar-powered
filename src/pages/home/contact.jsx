@@ -20,34 +20,37 @@ const Contact = () => {
           Get in Touch
         </h2>
 
-        {/* Gmail */}
+        {/* Email */}
         <div className="mb-4">
-          <h3 className="text-lg font-semibold">Email</h3>
+          <h3 className="text-lg font-semibold text-red-600">Email</h3>
           <a
-            href="kwekuamfo7@gmail.com
-"
-            className="text-gray-300 hover:text-red-500"
+            href="mailto:kwekuamfo7@gmail.com"
+            className="hover:text-red-200"
           >
             kwekuamfo7@gmail.com
-
           </a>
         </div>
 
         {/* Phone */}
         <div className="mb-4">
-          <h3 className="text-lg font-semibold">Phone</h3>
-          <p className="text-gray-300"> +233-533141229/ +233-538547420</p>
+          <h3 className="text-lg font-semibold text-red-600">Phone</h3>
+          <p className="hover:text-red-200">
+            +233-533141229 / +233-538547420
+          </p>
         </div>
 
         {/* Location */}
         <div>
-          <h3 className="text-lg font-semibold mb-2">Our Location</h3>
+          <h3 className="text-lg font-semibold mb-2 text-red-600">
+            Our Location
+          </h3>
           <div className="w-full h-60">
             <iframe
               className="w-full h-full rounded-lg"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8354345094373!2d144.95565111531754!3d-37.81732797975151!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d5df1d7d1b3%3A0x5045675218cee17a!2sMelbourne%20VIC%2C%20Australia!5e0!3m2!1sen!2sgh!4v1611784445134!5m2!1sen!2sgh"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3956.5099164319457!2d-1.212185414349402!3d5.710195994221787!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNcKwMzMnMzMuOSJOIDHCsDE1JzAyLjkiRQ!5e0!3m2!1sen!2sgh!4v1611784445134!5m2!1sen!2sgh"
               allowFullScreen=""
               loading="lazy"
+              title="Twifo Hemang Presbyterian Church Ghana"
             ></iframe>
           </div>
         </div>
