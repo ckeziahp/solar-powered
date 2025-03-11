@@ -44,7 +44,7 @@ const Contact = () => {
           <h3 className="text-lg font-semibold mb-2 text-red-600">
             Our Location
           </h3>
-          <div className="w-full h-60">
+          <div className="w-full h-60 mb-4">
             <iframe
               className="w-full h-full rounded-lg"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3956.5099164319457!2d-1.212185414349402!3d5.710195994221787!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNcKwMzMnMzMuOSJOIDHCsDE1JzAyLjkiRQ!5e0!3m2!1sen!2sgh!4v1611784445134!5m2!1sen!2sgh"
@@ -52,6 +52,16 @@ const Contact = () => {
               loading="lazy"
               title="Twifo Hemang Presbyterian Church Ghana"
             ></iframe>
+          </div>
+          <div className="text-center">
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=Twifo+Hemang+Presbyterian+Church+Ghana"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block text-white px-4 py-2 rounded hover:bg-red-500 transition"
+            >
+              View on Google Maps
+            </a>
           </div>
         </div>
       </div>

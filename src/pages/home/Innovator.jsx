@@ -58,7 +58,7 @@ const Innovator = () => {
             <FaBolt className="text-red-600" /> Why It Matters
           </motion.h2>
 
-          <p className="text-gray-700 text-base md:text-lg leading-relaxed">
+          <p className="text-base md:text-lg leading-relaxed">
             This innovation tackles{" "}
             <span className="font-semibold">energy insecurity</span> by providing an{" "}
             <span className="font-semibold">

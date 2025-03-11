@@ -37,24 +37,24 @@ const About = () => {
 
         <div className="flex flex-col md:flex-row items-center justify-center px-10 py-20 md:py-16 text-white gap-10">
   {/* Right: Text Content */}
-  <div className="w-full md:w-1/2 max-w-2xl flex flex-col px-20 py-20 -mt-5">
+  <div className="w-full md:w-1/2 max-w-2xl flex flex-col px-5 py-20 -mt-5">
     
     {/* Title with Space Below */}
-    <div className="mb-6 text-2xl">
-      <h1 className="font-bold text-red-600">We Solve Your Energy Problem</h1>
+    <div className="mb-6 text-2xl py-4">
+      <h1 className="font-bold text-red-600 py-6">We Solve Your Energy Problem</h1>
     </div>
 
     {/* First Paragraph */}
     <div className="mb-6">
       <p className="text-lg text-white leading-relaxed">
-        At <span className="font-semibold text-red-600">Chamas-Tech</span>, we are committed to providing innovative, eco-friendly charging solutions that harness the power of the sun. Our mission is to eradicate the overdependence on electricity to recharge traditional power banks when they run low and to see our product finding the interest of customers.
+        At <span className="font-semibold text-red-600">Chamas-Tech</span>, we are committed to providing eco-friendly charging solutions that harness the power of the sun. Our mission is to eradicate the overdependence on electricity to recharge with power banks and to see our product finding the interest of customers.
       </p>
     </div>
 
     {/* Second Paragraph with Top Margin */}
     <div className="mt-6">
       <p className="text-lg text-white leading-relaxed">
-        A small step toward a sustainable future starts with reliable energy solutions. With our portable solar chargers, you can stay powered anytime, anywhere.
+        A step toward a sustainable future starts with reliable energy solutions. With our portable solar chargers, you can stay powered anytime, anywhere.
       </p>
     </div>
     
