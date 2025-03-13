@@ -25,7 +25,7 @@ const Navbar = () => {
   return (
     <motion.nav
       className={`fixed top-0 left-0 w-full px-5 py-4 min-h-[50px] flex justify-between items-center transition-all duration-300 z-50 ${
-        scrolling ? "backdrop-blur-lg bg-black/80 shadow-lg" : "bg-black"
+        scrolling ? "backdrop-blur-lg  shadow-lg" : ""
       }`}
       animate={controls}
     >
@@ -63,7 +63,7 @@ const Navbar = () => {
 
       {/* Sliding Mobile Menu */}
       <motion.div
-        className={`fixed top-0 right-0 h-screen w-64 bg-black shadow-lg flex flex-col items-center justify-center z-50 ${
+        className={`fixed top-0 right-0 h-screen w-64 bg-white shadow-lg flex flex-col items-center justify-center z-50 ${
           menuOpen ? "block" : "hidden"
         }`}
         initial={{ x: "100%" }}

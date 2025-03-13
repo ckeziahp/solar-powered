@@ -24,13 +24,13 @@ const Footer = () => {
                 <a href="/terms" className="hover:text-red-500">Terms</a>
               </li>
               <li>
-                <a href="/policy" className="hover:text-red-500">Policy</a>
-              </li>
-              <li>
                 <a href="/about" className="hover:text-red-500">About Us</a>
               </li>
               <li>
                 <a href="/contact" className="hover:text-red-500">Contact Us</a>
+              </li>
+              <li>
+                <a href="/products" className="hover:text-red-500">Products</a>
               </li>
             </ul>
           </div>
@@ -53,7 +53,7 @@ const Footer = () => {
         {/* Bottom Section */}
         <div className="border-t border-gray-700 mt-10 pt-6 text-sm text-white w-full">
           Copyright &copy; {new Date().getFullYear()} 
-          <a href="https://solar-powered.netlify.app/" className="text-red-500 hover:underline"> Chasma-Tech</a>. All rights reserved.
+          <a href="https://solar-powered.netlify.app/" className=" hover:text-red-500"> Chasma-Tech</a>. All rights reserved.
         </div>
       </div>
     </div>
