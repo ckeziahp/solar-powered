@@ -31,7 +31,7 @@ const Navbar = () => {
     >
       {/* Logo Inserted Here */}
       <Link to="/" className="flex items-center">
-        <img src={"https://res.cloudinary.com/dxnamnbff/image/upload/v1741644230/WhatsApp_Image_2025-03-06_at_15.36.21_43fd7a46_julvll.jpg"} alt="Chasma-Tech Logo" className="w-15 h-auto mr-2" />
+        <img src={"https://res.cloudinary.com/dxnamnbff/image/upload/v1741644230/WhatsApp_Image_2025-03-06_at_15.36.21_43fd7a46_julvll.jpg"} alt="Chasma-Tech Logo" className="w-20 h-auto mr-2" />
         {/* <span className="text-2xl font-bold text-red-600">Chasm-Tech</span> */}
       </Link>
 
@@ -63,7 +63,7 @@ const Navbar = () => {
 
       {/* Sliding Mobile Menu */}
       <motion.div
-        className={`fixed top-0 right-0 h-screen w-64 bg-white shadow-lg flex flex-col items-center justify-center z-50 ${
+        className={`fixed top-0 right-0 h-screen w-64 bg-black shadow-lg flex flex-col items-center justify-center z-50 ${
           menuOpen ? "block" : "hidden"
         }`}
         initial={{ x: "100%" }}
