@@ -1,4 +1,5 @@
 import React from "react";
+import { FaWhatsapp } from "react-icons/fa"; // Import WhatsApp icon
 
 const Contact = () => {
   return (
@@ -31,12 +32,32 @@ const Contact = () => {
           </a>
         </div>
 
-        {/* Phone */}
+        {/* Phone - WhatsApp Icon + Number */}
         <div className="mb-4">
-          <h3 className="text-lg font-semibold text-red-600">Phone</h3>
-          <p className="hover:text-red-200">
-            +233-533141229 / +233-538547420
-          </p>
+          <h3 className="text-lg font-semibold text-red-600">WhatsApp</h3>
+          <div className="flex flex-col space-y-2">
+            {/* WhatsApp Link for First Number */}
+            <a
+              href="https://wa.me/233533141229"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center space-x-2 text-green-400 hover:text-green-600 transition-colors duration-300"
+            >
+              <FaWhatsapp className="text-2xl" />
+              <span className="text-white">+233-533141229</span>
+            </a>
+
+            {/* WhatsApp Link for Second Number */}
+            <a
+              href="https://wa.me/233538547420"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center space-x-2 text-green-400 hover:text-green-600 transition-colors duration-300"
+            >
+              <FaWhatsapp className="text-2xl" />
+              <span className="text-white">+233-538547420</span>
+            </a>
+          </div>
         </div>
 
         {/* Location */}
@@ -44,25 +65,21 @@ const Contact = () => {
           <h3 className="text-lg font-semibold mb-2 text-red-600">
             Our Location
           </h3>
-          <div className="w-full h-60 mb-4">
+          {/* Clicking the Map Opens Google Maps */}
+          <a
+            href="https://www.google.com/maps/search/?api=1&query=Twifo+Hemang+Presbyterian+Church+Ghana"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block w-full h-60"
+          >
             <iframe
-              className="w-full h-full rounded-lg"
+              className="w-full h-full rounded-lg pointer-events-none"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3956.5099164319457!2d-1.212185414349402!3d5.710195994221787!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNcKwMzMnMzMuOSJOIDHCsDE1JzAyLjkiRQ!5e0!3m2!1sen!2sgh!4v1611784445134!5m2!1sen!2sgh"
               allowFullScreen=""
               loading="lazy"
               title="Twifo Hemang Presbyterian Church Ghana"
             ></iframe>
-          </div>
-          <div className="text-center">
-            <a
-              href="https://www.google.com/maps/search/?api=1&query=Twifo+Hemang+Presbyterian+Church+Ghana"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block text-white px-4 py-2 rounded hover:bg-red-500 transition"
-            >
-              View on Google Maps
-            </a>
-          </div>
+          </a>
         </div>
       </div>
     </div>

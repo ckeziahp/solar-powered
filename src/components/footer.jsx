@@ -21,9 +21,6 @@ const Footer = () => {
             <h2 className="text-lg font-semibold text-white mb-3">Quick Links</h2>
             <ul className="text-white space-y-4">
               <li>
-                <a href="/terms" className="hover:text-red-500">Terms</a>
-              </li>
-              <li>
                 <a href="/about" className="hover:text-red-500">About Us</a>
               </li>
               <li>
@@ -36,7 +33,7 @@ const Footer = () => {
           </div>
 
           {/* Social Media Icons */}
-          <div>
+          <div className='gap-2'>
             <h2 className="text-lg font-semibold text-white mb-3">Follow Us</h2>
             <div className="flex justify-center space-x-4 space-y-5">
               <a href="https://www.facebook.com/share/1EHw687JfR/?mibextid=wwXIfr" className="text-white hover:text-red-500">
@@ -51,7 +48,7 @@ const Footer = () => {
         </div>
 
         {/* Bottom Section */}
-        <div className="border-t border-gray-700 mt-10 pt-6 text-sm text-white w-full">
+        <div className="border-t border-gray-700 pt-6 text-sm text-white w-full mt-[19px] pb-[32px] text-center">
           Copyright &copy; {new Date().getFullYear()} 
           <a href="https://solar-powered.netlify.app/" className=" hover:text-red-500"> Chasma-Tech</a>. All rights reserved.
         </div>

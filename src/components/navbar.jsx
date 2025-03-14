@@ -63,7 +63,7 @@ const Navbar = () => {
 
       {/* Sliding Mobile Menu */}
       <motion.div
-        className={`fixed top-0 right-0 h-screen w-64 bg-black shadow-lg flex flex-col items-center justify-center z-50 ${
+        className={`fixed top-0 right-0 h-screen w-30 bg-black shadow-lg flex flex-col items-center justify-center z-50 ${
           menuOpen ? "block" : "hidden"
         }`}
         initial={{ x: "100%" }}

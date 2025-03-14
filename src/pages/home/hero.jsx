@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 const Hero = () => {
  
   return (
-    <div className="relative h-screen flex items-center justify-center text-center px-6 group">
+    <div className="relative h-screen flex items-center justify-center text-center px-6 group font-bold py-4 text-6xl">
       {/* Background Image with Overlay */}
       <motion.div
         className="absolute inset-0 bg-cover bg-center transition-opacity duration-500 group-hover:opacity-80"
@@ -34,7 +34,7 @@ const Hero = () => {
         transition={{ duration: 1 }}
         className="relative z-10 max-w-xl"
       >
-        <h1 className="text-5xl md:text-6xl font-bold text-white leading-tight transition-all duration-500 group-hover:text-red-400">
+        <h1 className=" py-6 px-10 text-6xl w-full lg:pr-32 md:text-6xl font-bold text-white leading-tight transition-all duration-500 group-hover:text-red-400">
           Power Your Future with{" "}
           <span className="text-red-500">Chamas-Tech</span>
         </h1>
