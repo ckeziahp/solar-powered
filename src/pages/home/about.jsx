@@ -48,7 +48,7 @@ const About = () => {
                           {/* Title with Space Below */}
                           <div className="py-6 px-10 text-6xl w-full lg:pr-32">
 
-                            <h1 className=" text-center font-bold text-red-600">We Solve Your Energy Problem
+                            <h1 className="text-center font-bold text-red-600">We Solve Your Energy Problem
                             </h1>
 
                           </div>
